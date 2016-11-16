@@ -13,6 +13,15 @@ source /path/to/bashutillib/utillib.sh
 die 1 "Something went really wrong."
 ```
 
+* `isinteger`, `isnumber` check whether a given parameter is, respectively,
+an integer or a valid number.
+```
+isinteger 4    # true
+isinteger "4"  # true
+isinteger "no" # false
+isnumber -4.3  # true
+```
+
 * `remove_comments` remove comments in a file (non in-place). Also removes empty lines.
 ```
 remove_comments inputFile outputFile
