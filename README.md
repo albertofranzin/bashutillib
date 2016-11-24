@@ -32,6 +32,11 @@ remove_comments inputFile outputFile
 remove_empty_lines inputFile outputFile
 ```
 
+* `strlen` returns the length of a given string.
+```
+strlen "hello!"  # 6
+```
+
 * `warning` show a warning
 ```
 warning "Something didn't work as expected."

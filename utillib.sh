@@ -4,6 +4,6 @@
 DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
 DIR="$DIR/lib"
-. "$DIR/data.sh"
 . "$DIR/errors.sh"
 . "$DIR/files.sh"
+. "$DIR/strings.sh"

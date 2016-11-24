@@ -16,3 +16,7 @@ isnumber () {
     fi
 }
 
+# check the length of a string
+strlen () {
+    echo ${#1}
+}
