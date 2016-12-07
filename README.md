@@ -13,6 +13,32 @@ source /path/to/bashutillib/utillib.sh
 die 1 "Something went really wrong."
 ```
 
+* `file_exists`, `directory_exists`, `link_exists` test whether there is a
+file, directory/symlink or symlink with the given path/name.
+Return `""` if false, `"1"` if true.
+```
+touch existingfile.txt
+if [ `file_exists existingfile.txt` ]; then
+    echo "yay"
+else
+   echo "nay"
+fi
+# yay
+rm existingfile.txt
+if [ `file_exists existingfile.txt` ]; then
+    echo "yay"
+else
+   echo "nay"
+fi
+# nay
+if [ ! `file_exists existingfile.txt` ]; then
+    echo "yay"
+else
+   echo "nay"
+fi
+# yay
+```
+
 * `isinteger`, `isnumber` check whether a given parameter is, respectively,
 an integer or a valid number.
 ```
